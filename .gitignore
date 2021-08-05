@@ -2,3 +2,11 @@
 /node_modules
 node_modules/
 **/node_modules
+
+# files
+/apis
+*/apis
+**/apis
+/apis.js
+*/apis.js
+**/apis.js
