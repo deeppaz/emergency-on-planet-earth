@@ -1,0 +1,29 @@
+{
+  "name": "emergency-on-planet-earth",
+  "version": "1.0.0",
+  "description": "a bot tweeting as \"emergency on planet earth\" on twitter",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/deeppaz/emergency-on-planet-earth.git"
+  },
+  "keywords": [
+    "bot",
+    "twitter",
+    "bot",
+    "tweeting",
+    "bot"
+  ],
+  "author": "deeppaz",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/deeppaz/emergency-on-planet-earth/issues"
+  },
+  "homepage": "https://github.com/deeppaz/emergency-on-planet-earth#readme",
+  "dependencies": {
+    "tumblrwks": "^0.3.0"
+  }
+}
