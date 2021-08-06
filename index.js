@@ -2,6 +2,7 @@ const Tweeting = require('twit');
 const APIs = require('./apis');
 const customId = require('custom-id');
 
+
 //GENERATING RANDOM AND CUSTOM ID
 let GenerateRandomID = customId({
     uniqueId: 500,
@@ -34,4 +35,4 @@ async function TweetingFun() {
 }
 
 //TIMER
-setInterval(TweetingFun, 2500);
+setInterval(TweetingFun, 600000);
