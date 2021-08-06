@@ -4,8 +4,9 @@ const customId = require('custom-id');
 
 //GENERATING RANDOM AND CUSTOM ID
 let GenerateRandomID = customId({
-    name:'12345',
-    randomLength: 2
+    uniqueId: 1, 
+    randomLength: 1,
+    lowerCase: true
 })
 
 var T = new Tweeting({
@@ -19,7 +20,7 @@ var T = new Tweeting({
 
 //POST TO TWITTER
 async function TweetingFun() {
-    T.post('statuses/update', { status: 'emergency on planet earth '+'('+customId({uniqueId: 1, randomLength: 1,lowerCase: true})+')'+'' },
+    T.post('statuses/update', { status: 'emergency on planet earth '+'('+GenerateRandomID+')'+'' },
         function (err, data, response) {
             console.log(data);
         }
