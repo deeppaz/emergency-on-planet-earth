@@ -24,6 +24,7 @@
   },
   "homepage": "https://github.com/deeppaz/emergency-on-planet-earth#readme",
   "dependencies": {
+    "custom-id": "^1.2.0",
     "dotenv": "^10.0.0",
     "tumblrwks": "^0.3.0",
     "twit": "^2.2.11"

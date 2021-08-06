@@ -1,5 +1,12 @@
 const Tweeting = require('twit');
 const APIs = require('./apis');
+const customId = require('custom-id');
+
+//GENERATING RANDOM AND CUSTOM ID
+let GenerateRandomID = customId({
+    name:'12345',
+    randomLength: 2
+})
 
 var T = new Tweeting({
     consumer_key: APIs.CONSUMER_KEY,
@@ -10,12 +17,14 @@ var T = new Tweeting({
     strictSSL: true
 });
 
+//POST TO TWITTER
 async function TweetingFun() {
-    T.post('statuses/update', { status: 'test tweet5' },
+    T.post('statuses/update', { status: 'emergency on planet earth '+'('+customId({uniqueId: 1, randomLength: 1,lowerCase: true})+')'+'' },
         function (err, data, response) {
             console.log(data);
         }
     )
 }
 
-setInterval(TweetingFun, 2500);
+//TIMER
+setInterval(TweetingFun, 25000);
