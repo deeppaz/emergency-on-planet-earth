@@ -28,4 +28,4 @@ async function TweetingFun() {
 }
 
 //TIMER
-setInterval(TweetingFun, 25000);
+setInterval(TweetingFun, 60000);
