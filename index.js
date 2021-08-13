@@ -1,10 +1,14 @@
 const Tweeting = require('twit');
 const APIs = require('./apis');
+const Hashtags = require('./hashtags');
 const customId = require('custom-id');
 
-//GENERATING RANDOM AND CUSTOM ID
+//RANDOM HASHTAGS BY LIST
+console.log("Hashtag: "+ Hashtags());
+
+//GENERATING RANDOM AND CUSTOM ID 
 let GenerateRandomID = customId({
-    uniqueId: 1, 
+    uniqueId: 500,
     randomLength: 1,
     lowerCase: true
 })
@@ -20,7 +24,13 @@ var T = new Tweeting({
 
 //POST TO TWITTER
 async function TweetingFun() {
-    T.post('statuses/update', { status: 'emergency on planet earth '+'('+GenerateRandomID+')'+'' },
+    T.post('statuses/update', {
+        status: 'emergency on planet earth '+ Hashtags() +' ' + '(' + customId({
+            uniqueId: 500,
+            randomLength: 1,
+            lowerCase: true
+        }) + ')' + ''
+    },
         function (err, data, response) {
             console.log(data);
         }
@@ -28,4 +38,4 @@ async function TweetingFun() {
 }
 
 //TIMER
-setInterval(TweetingFun, 2500);
+setInterval(TweetingFun, 3600000);
