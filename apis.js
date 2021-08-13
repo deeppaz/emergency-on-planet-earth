@@ -1,6 +1,0 @@
-module.exports = Object.freeze({
-    CONSUMER_KEY:'UixtUjG65dhzQbIOMO438U716',
-    CONSUMER_SECRET:'gbnVSuOJWWcyrTEY2T62zRpdRtOie4X8gti5Pnz3WffHY7Clzr',
-    ACCESS_TOKEN:'1227359790696947712-UguRCj9LKQzWSMbD8ugux1d2cU7U8v',
-    ACCESS_SECRET_TOKEN:'bYqrmuMgm2dUWuHlMOEoCMe8q7bNEzeM5iaf6OohuyzZ0'
-});
