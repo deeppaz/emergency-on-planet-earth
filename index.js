@@ -23,7 +23,7 @@ var T = new Tweeting({
 });
 
 //POST TO TWITTER
-async function TweetingFun() {
+async function TweetingFunc() {
     T.post('statuses/update', {
         status: 'emergency on planet earth '+ Hashtags() +' ' + '(' + customId({
             uniqueId: 500,
@@ -38,4 +38,4 @@ async function TweetingFun() {
 }
 
 //TIMER
-setInterval(TweetingFun, 3600000);
+setInterval(TweetingFunc, 3600000);
