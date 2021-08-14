@@ -6,18 +6,20 @@ const imageDownloader = require('node-image-downloader')
 const postData = require('./data/naturephotos.js');
 const APIs = require('./apis');
 const Hashtags = require('./hashtags');
-// const DATAs = "./data/theleoisallinthemind.tumblr.com"
+
+var posted = [];
+var readyToPost = postData.posts;
+
+//CLEAR TERMINAL
+process.stdout.write('\x1B[2J\x1B[0f');
+console.log("wait getting ready...")
 
 //RANDOM HASHTAGS BY LIST
 console.log("Hashtag: " + Hashtags());
 
-//GENERATING RANDOM AND CUSTOM ID 
-let GenerateRandomID = customId({
-    uniqueId: 500,
-    randomLength: 1,
-    lowerCase: true
-})
+////////////////////////////TEXT TWEET TO TWITTER//////////////////////////////
 
+//API
 var T = new Tweeting({
     consumer_key: APIs.CONSUMER_KEY,
     consumer_secret: APIs.CONSUMER_SECRET,
@@ -44,18 +46,11 @@ async function TweetingFun() {
 
 //TIMER
 setInterval(TweetingFun, 360000);
+////////////////////////////TEXT TWEET TO TWITTER END/////////////////////////
 
 ////////////////////////////IMAGE TWEET TO TWITTER//////////////////////////////
-
-//CLEAR TERMINAL
-process.stdout.write('\x1B[2J\x1B[0f');
-console.log("focircle getting ready...")
-
-var posted = [];
-var readyToPost = postData.posts;
-
 //POST THE IMAGE ON TWITTER
-async function TweetImageFunction(image) {
+async function TweetImageFunction() {
     var currentPost = readyToPost.pop();
     posted.push(currentPost);
 
@@ -77,8 +72,7 @@ async function TweetImageFunction(image) {
             }
         ],
         dest: './data/testdata', //destination folder
-    })
-        .then((info) => {
+    }).then((info) => {
             console.log('all done in twitter function', info);
             var photoTwitter = fs.readFileSync('./data/testdata' + '/' + currentPost.photo_url_1280.split("/").pop(), { encoding: 'base64' });
 
@@ -103,8 +97,7 @@ async function TweetImageFunction(image) {
                     fs.renameSync('./data/testdata' + "/" + charAyir[4], './data/testdata' + "/postedbefore/" + charAyir[4]);
                 }
             };
-        })
-        .catch((error, response, body) => {
+        }).catch((error, response, body) => {
             console.log('something goes bad in twitter function!')
             console.log(error)
         })
@@ -113,6 +106,9 @@ async function TweetImageFunction(image) {
 //TIMER
 setInterval(TweetImageFunction, 2600);
 
+////////////////////////////IMAGE TWEET TO TWITTER END/////////////////////////
+
+//GET DATE TIME AFTER POST
 function getDateTime() {
     var date = new Date();
     var hour = date.getHours(); hour = (hour < 10 ? "0" : "") + hour;
@@ -123,6 +119,3 @@ function getDateTime() {
     var day = date.getDate(); day = (day < 10 ? "0" : "") + day;
     return hour + ":" + min + ":" + sec;
 }
-
-
-////////////////////////////IMAGE TWEET TO TWITTER END/////////////////////////

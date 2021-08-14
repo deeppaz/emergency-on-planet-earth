@@ -1,5 +1,5 @@
 
-const roastList = [
+const disasterList = [
     '#ecosystem',
     '#nature',
     '#environment',
@@ -89,5 +89,5 @@ const roastList = [
 ];
 
 module.exports = function () {
-    return roastList[Math.floor(Math.random() * roastList.length)];
+    return disasterList[Math.floor(Math.random() * disasterList.length)];
 };
