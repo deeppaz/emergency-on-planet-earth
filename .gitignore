@@ -10,3 +10,7 @@ node_modules/
 /apis.js
 */apis.js
 **/apis.js
+/data
+*/data
+./data
+**/data
