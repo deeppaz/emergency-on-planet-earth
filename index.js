@@ -1,5 +1,10 @@
 const Tweeting = require('twit');
+<<<<<<< HEAD
 const fs = require('fs');
+=======
+const APIs = require('./apis');
+const Hashtags = require('./hashtags');
+>>>>>>> 9cf93e32c51af5f529d1164b1db6b55037e720a4
 const customId = require('custom-id');
 const imageDownloader = require('node-image-downloader')
 
@@ -16,7 +21,18 @@ process.stdout.write('\x1B[2J\x1B[0f');
 console.log("wait getting ready...")
 
 //RANDOM HASHTAGS BY LIST
+<<<<<<< HEAD
 console.log("Hashtag: " + Hashtags());
+=======
+console.log("Hashtag: "+ Hashtags());
+
+//GENERATING RANDOM AND CUSTOM ID 
+let GenerateRandomID = customId({
+    uniqueId: 500,
+    randomLength: 1,
+    lowerCase: true
+})
+>>>>>>> 9cf93e32c51af5f529d1164b1db6b55037e720a4
 
 ////////////////////////////TEXT TWEET TO TWITTER//////////////////////////////
 
@@ -33,7 +49,11 @@ var T = new Tweeting({
 //POST TO TWITTER
 async function TweetingFun() {
     T.post('statuses/update', {
+<<<<<<< HEAD
         status: 'emergency on planet earth ' + Hashtags() + ' ' + '(' + customId({
+=======
+        status: 'emergency on planet earth '+ Hashtags() +' ' + '(' + customId({
+>>>>>>> 9cf93e32c51af5f529d1164b1db6b55037e720a4
             uniqueId: 500,
             randomLength: 1,
             lowerCase: true
@@ -46,6 +66,7 @@ async function TweetingFun() {
 }
 
 //TIMER
+<<<<<<< HEAD
 setInterval(TweetingFun, 360000);
 ////////////////////////////TEXT TWEET TO TWITTER END/////////////////////////
 
@@ -123,3 +144,6 @@ function getDateTime() {
     var day = date.getDate(); day = (day < 10 ? "0" : "") + day;
     return hour + ":" + min + ":" + sec;
 }
+=======
+setInterval(TweetingFun, 3600000);
+>>>>>>> 9cf93e32c51af5f529d1164b1db6b55037e720a4
