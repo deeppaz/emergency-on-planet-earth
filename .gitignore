@@ -4,13 +4,13 @@ node_modules/
 **/node_modules
 
 # files
-/apis
-*/apis
-**/apis
-/apis.js
-*/apis.js
-**/apis.js
-/data
-*/data
-./data
-**/data
+# /apis
+# */apis
+# **/apis
+# /apis.js
+# */apis.js
+# **/apis.js
+# /data
+# */data
+# ./data
+# **/data
