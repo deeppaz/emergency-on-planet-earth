@@ -27,6 +27,7 @@
     "custom-id": "^1.2.0",
     "dotenv": "^10.0.0",
     "fs": "0.0.1-security",
+    "fs-extra": "^10.0.0",
     "node-image-downloader": "^1.0.7",
     "tumblrwks": "^0.3.0",
     "twit": "^2.2.11"
