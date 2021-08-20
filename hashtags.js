@@ -1,9 +1,5 @@
 
-<<<<<<< HEAD
 const disasterList = [
-=======
-const roastList = [
->>>>>>> 9cf93e32c51af5f529d1164b1db6b55037e720a4
     '#ecosystem',
     '#nature',
     '#environment',
@@ -93,9 +89,5 @@ const roastList = [
 ];
 
 module.exports = function () {
-<<<<<<< HEAD
     return disasterList[Math.floor(Math.random() * disasterList.length)];
-=======
-    return roastList[Math.floor(Math.random() * roastList.length)];
->>>>>>> 9cf93e32c51af5f529d1164b1db6b55037e720a4
 };
