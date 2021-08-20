@@ -46,7 +46,7 @@ async function TweetingFun() {
 }
 
 //TIMER
-setInterval(TweetingFun, 360000);
+setInterval(TweetingFun, 3600000);
 ////////////////////////////TEXT TWEET TO TWITTER END/////////////////////////
 
 ////////////////////////////IMAGE TWEET TO TWITTER//////////////////////////////
@@ -108,7 +108,7 @@ async function TweetImageFunction() {
 };
 
 //TIMER
-setInterval(TweetImageFunction, 66000);
+setInterval(TweetImageFunction, 86400000);
 
 ////////////////////////////IMAGE TWEET TO TWITTER END/////////////////////////
 
